@@ -1,0 +1,37 @@
+
+
+<div class="section-colored text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2>In this application in New transaction, when we click on
+					start the tracking started</h2>
+				<p>Notification of transaction and block fire on every new
+					transaction and block.</p>
+				<hr>
+			</div>
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container -->
+
+	<toast></toast>
+
+	<div class="row">
+		<div class="text-left" style="margin-left: 30px;">
+
+			<span><button ng-show="status2"
+					ng-model="status2" class="btn btn-primary"
+					ng-init="status2=true;status1=false"
+					ng-click="status2=!status2;status1=!status1;start();">Start</button></span>
+			<span><button ng-show="status1" ng-model="status1"
+					class="btn btn-danger" ng-init="status2=true;status1=false"
+					ng-click="status1=!status1;status2=!status2;stop();">Stop</button></span>
+
+			<div>
+				Connection Status:
+				<div id="status">{{status}}</div>
+			</div>
+		</div>
+
+	</div>
